@@ -1,13 +1,13 @@
 def oxford_comma(array)
   if array.size == 1
-    array.join
+    new_array = array.join
   elsif array.size == 2
-    array.join(" and ")
+    new_array = array.join(" and ")
   else
     array[array.size - 1] = "and #{array.last}"
-    array.join(", ")
+    new_array = array.join(", ")
   end
-  return array
+  return new_array
 end
 
 # puts oxford_comma(["kiwi", "durian", "starfruit"])
